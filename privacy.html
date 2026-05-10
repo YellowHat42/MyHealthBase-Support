@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthBase — Privacy Policy</title>
+  <style>
+    :root {
+      --accent: #007AFF;
+      --bg: #f5f5f7;
+      --surface: #ffffff;
+      --text: #1d1d1f;
+      --secondary: #6e6e73;
+      --border: #d2d2d7;
+      --radius: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --surface: #1c1c1e;
+        --text: #f5f5f7;
+        --secondary: #98989d;
+        --border: #38383a;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 24px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      color: var(--secondary);
+      font-size: 15px;
+      margin-top: 4px;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .intro {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin-bottom: 40px;
+      font-size: 15px;
+      color: var(--secondary);
+      line-height: 1.65;
+    }
+
+    .intro strong {
+      color: var(--text);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 14px;
+      letter-spacing: -0.3px;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .card-row {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .card-row:last-child {
+      border-bottom: none;
+    }
+
+    .card-row .icon {
+      font-size: 20px;
+      width: 28px;
+      flex-shrink: 0;
+      text-align: center;
+      margin-top: 1px;
+    }
+
+    .card-row .content strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .card-row .content p {
+      font-size: 14px;
+      color: var(--secondary);
+      line-height: 1.55;
+    }
+
+    .prose {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      font-size: 14px;
+      color: var(--secondary);
+      line-height: 1.65;
+    }
+
+    .prose p + p {
+      margin-top: 10px;
+    }
+
+    .prose ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    .prose li {
+      margin-bottom: 5px;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .contact-card p {
+      color: var(--secondary);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 10px 24px;
+      border-radius: 980px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--secondary);
+      font-size: 13px;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>HealthBase</h1>
+  <p>Privacy Policy</p>
+</header>
+
+<main>
+
+  <div class="intro">
+    <strong>Your data stays on your device.</strong> HealthBase does not operate any servers, does not collect personal information, and does not share your data with anyone. Everything the app reads and stores remains on your iPhone.
+    <br><br>
+    This policy describes what data the app accesses and why. It was last updated on <strong>May 10, 2026</strong>.
+  </div>
+
+  <!-- Data we access -->
+  <section>
+    <h2>Data HealthBase Accesses</h2>
+    <div class="card">
+
+      <div class="card-row">
+        <div class="icon">❤️</div>
+        <div class="content">
+          <strong>Apple Health — Workouts</strong>
+          <p>HealthBase reads your workout history, including activity type, duration, calories burned, and heart rate samples. This data is used to display your workout list and detail views. It is never transmitted off your device.</p>
+        </div>
+      </div>
+
+      <div class="card-row">
+        <div class="icon">📍</div>
+        <div class="content">
+          <strong>Apple Health — GPS Routes</strong>
+          <p>For workouts that include a GPS route, HealthBase reads the recorded coordinates to draw maps, compute elevation profiles, and calculate speed. Route coordinates are also used to determine the city and region where a workout took place, using Apple's on-device reverse geocoding. No coordinates are sent to third-party servers.</p>
+        </div>
+      </div>
+
+      <div class="card-row">
+        <div class="icon">👟</div>
+        <div class="content">
+          <strong>Apple Health — Steps</strong>
+          <p>HealthBase reads your daily step count to display the 7-day steps chart on the Stats screen and to show steps-per-minute data on individual workouts.</p>
+        </div>
+      </div>
+
+      <div class="card-row">
+        <div class="icon">🔗</div>
+        <div class="content">
+          <strong>Strava</strong>
+          <p>If you choose to connect Strava, HealthBase communicates directly with the Strava API using API credentials you supply. No Strava data passes through any intermediary server operated by HealthBase. The app stores your Strava access and refresh tokens in the iOS Keychain on your device. You can disconnect Strava at any time from Settings.</p>
+        </div>
+      </div>
+
+      <div class="card-row">
+        <div class="icon">📷</div>
+        <div class="content">
+          <strong>Camera</strong>
+          <p>The camera is used only when you scan a barcode in the Nutrition screen to look up food information. Camera access is requested at the moment you initiate a scan and is not used for any other purpose.</p>
+        </div>
+      </div>
+
+      <div class="card-row">
+        <div class="icon">🥗</div>
+        <div class="content">
+          <strong>Nutrition Log</strong>
+          <p>Food entries you log are stored locally on your device using SwiftData. This data is not shared or transmitted anywhere. If you have iCloud Backup enabled on your device, this data may be included in your personal iCloud backup under Apple's standard backup policies.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What we do NOT do -->
+  <section>
+    <h2>What HealthBase Does Not Do</h2>
+    <div class="card">
+      <div class="card-row">
+        <div class="icon">🚫</div>
+        <div class="content">
+          <strong>No accounts or sign-in</strong>
+          <p>HealthBase does not require you to create an account or provide any personal information to use the app.</p>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="icon">🚫</div>
+        <div class="content">
+          <strong>No analytics or tracking</strong>
+          <p>HealthBase does not use any analytics frameworks, crash reporters, or advertising SDKs. No usage data or identifiers are collected.</p>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="icon">🚫</div>
+        <div class="content">
+          <strong>No data sharing</strong>
+          <p>HealthBase does not sell, share, or disclose your data to any third parties.</p>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="icon">🚫</div>
+        <div class="content">
+          <strong>No remote servers</strong>
+          <p>HealthBase has no backend. The only outbound network connections the app makes are directly to the Strava API (if you connect Strava) and to Apple's geocoding service when resolving workout locations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Health data note -->
+  <section>
+    <h2>Health Data</h2>
+    <div class="prose">
+      <p>HealthKit data is accessed with your explicit permission and is governed by Apple's Health privacy rules. HealthBase only requests permission to read the specific data types it uses. You can review and revoke these permissions at any time in <strong>iPhone Settings → Health → Data Access &amp; Devices → HealthBase</strong>.</p>
+      <p>HealthBase does not write any data back to Apple Health.</p>
+    </div>
+  </section>
+
+  <!-- Children -->
+  <section>
+    <h2>Children's Privacy</h2>
+    <div class="prose">
+      <p>HealthBase is not directed at children under the age of 13. The app does not knowingly collect any information from children.</p>
+    </div>
+  </section>
+
+  <!-- Changes -->
+  <section>
+    <h2>Changes to This Policy</h2>
+    <div class="prose">
+      <p>If this privacy policy changes materially, the updated policy will be posted at this URL with a new effective date. Because HealthBase collects no personal data, no notification to users is required — but significant changes will be noted in the app's release notes.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h2>Contact</h2>
+    <div class="contact-card">
+      <p>Questions about this privacy policy? Get in touch.</p>
+      <a href="mailto:rbuelling@gmail.com">Email Us</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 HealthBase &nbsp;·&nbsp; <a href="support.html" style="color: inherit;">Support</a>
+</footer>
+
+</body>
+</html>
