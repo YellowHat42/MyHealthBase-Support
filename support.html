@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthBase — Support</title>
+  <style>
+    :root {
+      --accent: #007AFF;
+      --bg: #f5f5f7;
+      --surface: #ffffff;
+      --text: #1d1d1f;
+      --secondary: #6e6e73;
+      --border: #d2d2d7;
+      --radius: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --surface: #1c1c1e;
+        --text: #f5f5f7;
+        --secondary: #98989d;
+        --border: #38383a;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 24px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      color: var(--secondary);
+      font-size: 15px;
+      margin-top: 4px;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: -0.3px;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .card-row {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .card-row:last-child {
+      border-bottom: none;
+    }
+
+    .card-row .icon {
+      font-size: 20px;
+      width: 28px;
+      flex-shrink: 0;
+      text-align: center;
+      margin-top: 1px;
+    }
+
+    .card-row .content strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .card-row .content p {
+      font-size: 14px;
+      color: var(--secondary);
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    details + details {
+      border-radius: var(--radius);
+    }
+
+    summary {
+      font-size: 15px;
+      font-weight: 500;
+      padding: 16px 18px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--secondary);
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-body {
+      padding: 0 18px 16px;
+      font-size: 14px;
+      color: var(--secondary);
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+    }
+
+    .faq-body p + p { margin-top: 8px; }
+
+    .faq-body ol, .faq-body ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    .faq-body li { margin-bottom: 4px; }
+
+    .faq-body a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .faq-body code {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-family: "SF Mono", "Menlo", monospace;
+      font-size: 13px;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .contact-card p {
+      color: var(--secondary);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 10px 24px;
+      border-radius: 980px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--secondary);
+      font-size: 13px;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>HealthBase</h1>
+  <p>Support &amp; Help</p>
+</header>
+
+<main>
+
+  <!-- Features overview -->
+  <section>
+    <h2>What's in HealthBase</h2>
+    <div class="card">
+      <div class="card-row">
+        <div class="icon">🏃</div>
+        <div class="content">
+          <strong>Workouts</strong>
+          <p>Browse every workout from Apple Health and Strava in one unified list. Filter by activity type, date, location, cadence, or source. Tap any workout for GPS maps, heart rate graphs, elevation profiles, speed charts, and more.</p>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="icon">📊</div>
+        <div class="content">
+          <strong>Stats</strong>
+          <p>See your daily step count and workout duration for the past 7 days, plotted against your personal step goal.</p>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="icon">🥗</div>
+        <div class="content">
+          <strong>Nutrition</strong>
+          <p>Log food for the day with calorie and macro tracking. Search by name or scan a barcode to look up nutritional info automatically.</p>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="icon">🔗</div>
+        <div class="content">
+          <strong>Strava Integration</strong>
+          <p>Connect your Strava account to pull in activity names, Relative Effort scores, gear info, and precise time zones. Export Apple Health workouts to Strava directly from the app.</p>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="icon">📤</div>
+        <div class="content">
+          <strong>Excel Export</strong>
+          <p>Export your full workout history to an Excel (.xlsx) file from Settings. Share it anywhere via the iOS share sheet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strava setup -->
+  <section>
+    <h2>Connecting Strava</h2>
+    <div class="card">
+      <div class="card-row">
+        <div class="content">
+          <p>HealthBase uses your own Strava API credentials, which keeps your data private and within your control. Setup takes about 5 minutes.</p>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="icon">1</div>
+        <div class="content">
+          <strong>Create a Strava API Application</strong>
+          <p>Go to <a href="https://www.strava.com/settings/api">strava.com/settings/api</a> and create a new application. Set the <strong>Authorization Callback Domain</strong> to <code>localhost</code>.</p>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="icon">2</div>
+        <div class="content">
+          <strong>Copy your credentials</strong>
+          <p>After creating the app, Strava shows you a <strong>Client ID</strong> (a number) and a <strong>Client Secret</strong> (a long string). You'll need both.</p>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="icon">3</div>
+        <div class="content">
+          <strong>Enter them in HealthBase</strong>
+          <p>Open <strong>Settings → Strava Integration</strong>, paste your Client ID and Client Secret, then tap <strong>Connect with Strava</strong> and authorize the app.</p>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="icon">4</div>
+        <div class="content">
+          <strong>Reload your workouts</strong>
+          <p>Pull to refresh on the Workouts screen. HealthBase will match Apple Health workouts to Strava activities and merge their data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>Why isn't a workout showing up?</summary>
+      <div class="faq-body">
+        <p>HealthBase reads workouts from Apple Health. Make sure the app has Health permissions: go to <strong>iPhone Settings → Health → Data Access &amp; Devices → HealthBase</strong> and confirm that workout access is enabled.</p>
+        <p>Workouts default to showing the last 30 days. Check whether a date filter is active — tap the filter icon at the top left of the Workouts screen to review or clear filters.</p>
+        <p>If you just recorded a workout, pull to refresh on the Workouts screen.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Why does a workout show no location or map?</summary>
+      <div class="faq-body">
+        <p>GPS route data comes from Apple Health. If the workout was recorded without GPS (for example, on a treadmill, or if location was disabled during recording), no route will be available.</p>
+        <p>Location labels in the workout list are geocoded from GPS coordinates and cached locally. While the cache is building you'll see a progress indicator at the top of the list — locations will fill in as geocoding completes.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Why isn't my Strava workout matching an Apple Health workout?</summary>
+      <div class="faq-body">
+        <p>HealthBase matches workouts by comparing their start times. The default tolerance is 60 seconds. If your watch and phone clocks differ, or if Strava and Apple Health recorded slightly different start times, you may need to increase the tolerance.</p>
+        <p>Go to <strong>Settings → Strava Integration → Match Tolerance</strong> and raise the value. Then pull to refresh on the Workouts screen.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How does Activity Type Mapping work?</summary>
+      <div class="faq-body">
+        <p>When you export a workout to Strava, HealthBase maps the Apple Health activity type to the closest Strava sport type. If the default mapping isn't right for you — for example, if you want indoor cycling workouts to appear in Strava as <em>Virtual Ride</em> — you can override it.</p>
+        <p>Go to <strong>Settings → Strava Export Defaults → Activity Type Mapping</strong>, tap <strong>+</strong>, choose the source type, and pick the Strava type you want it exported as.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What does "Clear Workout Cache" do?</summary>
+      <div class="faq-body">
+        <p><strong>Clear Workout Cache</strong> removes the locally cached workout list so it will be re-fetched fresh from Apple Health and Strava on the next load. Your geocoded location data is preserved.</p>
+        <p><strong>Clear Workout Location Cache</strong> additionally removes all cached geocoded locations. After clearing, HealthBase will re-geocode each workout the next time it loads — this can take a while if you have many workouts.</p>
+        <p>Use these options if workouts are missing or out of date and a pull-to-refresh doesn't help.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do I export my workouts to Excel?</summary>
+      <div class="faq-body">
+        <p>Go to <strong>Settings → Data Export → Export Workouts</strong>. HealthBase generates an <code>.xlsx</code> file containing all cached workouts and presents the iOS share sheet so you can save it to Files, email it, or send it to another app.</p>
+        <p>Tip: elevation and speed data populate as you open individual workouts. Open any workouts you want those columns filled in for before exporting.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What data does HealthBase access?</summary>
+      <div class="faq-body">
+        <p>HealthBase reads workout data, route GPS data, heart rate samples, and step counts from Apple Health — only the data types you authorize. No data is sent to any server. All processing happens on your device.</p>
+        <p>If you connect Strava, HealthBase communicates directly with the Strava API using your own credentials. No third-party servers are involved.</p>
+        <p>Food entries are stored locally on your device using SwiftData and are not shared or backed up outside of iCloud (if you have iCloud backups enabled).</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Why does the app show "Unable to Load" on the Workouts screen?</summary>
+      <div class="faq-body">
+        <p>This usually means HealthBase was denied access to Apple Health. Go to <strong>iPhone Settings → Health → Data Access &amp; Devices → HealthBase</strong> and enable the relevant data types, then return to the app and tap <strong>Retry</strong>.</p>
+        <p>If Strava is connected and a Strava error appears in Settings, tap the copy icon next to the error and send it to support so we can help diagnose the issue.</p>
+      </div>
+    </details>
+
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h2>Contact Support</h2>
+    <div class="contact-card">
+      <p>Have a question not answered here, or found a bug? Send an email and we'll get back to you as soon as possible.</p>
+      <a href="mailto:rbuelling@gmail.com">Email Support</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 HealthBase. All rights reserved.
+</footer>
+
+</body>
+</html>
